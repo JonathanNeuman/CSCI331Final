@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/nav.css" rel="stylesheet">
+    <link href="CSS/inPractice.css" rel="stylesheet">
+    <script src="JS/inPractice.js" defer></script>
+    <title>In Practice</title>
+</head>
+<body>
+    <nav>
+        <a href = "index.html">Home</a>
+        <a href="transitions.html">Transitions</a>
+        <a href="animations.html">Animations</a>
+        <a href="inPractice.html">In Practice</a>
+    </nav>
+
+    <h1>LAMP Stack</h1>
+    <div id="apiData">
+    </div>
+    <div id="buttons">
+        <button id="getButton" class="button">Get Another User</button>
+        <form action="php/main.php" method="POST">
+        <input type="hidden" name="first" value="test">
+        <input type="hidden" name="last" value="">
+        <input type="hidden" name="age" value="">
+        <input id="addButton" class="button" type="submit" value="Add This One">
+        </form>
+    </div>
+    
+</body>
+</html>
