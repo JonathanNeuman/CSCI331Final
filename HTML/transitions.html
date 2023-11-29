@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../CSS/nav.css" rel="stylesheet">
+    <link href="../CSS/transition.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -18,20 +19,16 @@
 
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus cum a officia corporis ipsa earum, itaque enim dolore. Omnis vel exercitationem ut repellendus atque esse mollitia distinctio porro, aperiam consequatur?</p>
     
-    <label>
-        <input type="checkbox">
-        <div class="card">
-            <div class="front">
-                <h1>Jon Neuman</h1>
-                <h2>test</h2>
-                <b>sadoifjasdoifj</b>
-            </div>
-            <div class="back">
-                <h1>About me</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi sed nemo impedit modi exercitationem, ratione placeat molestias dolorum quos culpa natus sapiente possimus ab voluptas velit perspiciatis et? Temporibus, nihil.</p>
-                <p class="click">Click to Flip</p>
-            </div>
+    <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img src="../Images/paris.jpg" alt="Paris" style="width:300px;height:200px">
+          </div>
+          <div class="flip-box-back">
+            <h2>Paris</h2>
+            <p>What an amazing city</p>
+          </div>
         </div>
-    </label>
+      </div> 
 </body>
 </html>
