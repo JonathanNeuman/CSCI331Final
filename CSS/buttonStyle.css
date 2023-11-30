@@ -1,0 +1,55 @@
+button{
+	width: 180px;
+	height: 60px;
+	background: none;
+	border-top: 2px dashed black;
+	border-bottom: 2px dashed black;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	border-radius: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: 500ms;
+	margin: 0 auto;
+}
+
+span, svg{
+	position: absolute;
+	color: black;
+	fill: transparent;
+	font-size: 20px;
+	letter-spacing: .2em;
+	font-weight: 400;
+}
+button:focus{
+	outline: none;
+	border: 2px solid transparent;
+	width: 60px;
+	border-left: 2px solid black;
+	border-bottom: 2px solid black;
+	animation: spin 2s 500ms forwards;
+}
+button:focus span{
+	color: transparent;
+}
+button:focus svg{
+	animation: check 500ms 2300ms forwards;
+}
+
+/* Let's Animate */
+
+@keyframes spin {
+	80%{
+		border: 2px solid transparent;
+		border-left: 2px solid black;
+	}
+	100%{
+		transform: rotate(1080deg);
+		border: 2px solid black;
+	}
+}
+@keyframes check{
+	to{fill: black;}
+}

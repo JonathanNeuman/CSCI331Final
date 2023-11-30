@@ -1,0 +1,58 @@
+body {
+    
+}
+
+.morph {
+    margin: 90px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    color: darkgreen;
+    
+    height: 100%;
+    letter-spacing: 10px;
+    filter: blur(0.2px) contrast(30);
+    padding-bottom: 60px;
+}
+
+
+.morph .word {
+    position: absolute;
+    padding: 0 50px;
+    background-color: rgba(255, 0, 0, 0.5); /* Red color with 50% opacity */
+    animation: morph 25s linear infinite;
+    animation-delay: 2s;
+    font-family: "Luckiest Guy", cursive;
+}
+
+.morph .word:nth-child(1){
+    animation-delay: -16s;
+}
+
+.morph .word:nth-child(2){
+    animation-delay: -14s;
+    background-color: #13d645;
+}
+
+.morph .word:nth-child(3){
+    animation-delay: -11s;
+    background-color: gold;
+}
+
+.morph .word:nth-child(4){
+    animation-delay: -9s;
+    background-color: darkorange;
+}
+
+@keyframes morph{
+    0%, 5%, 100%{
+        opacity: 1;
+        filter: blur(0);
+    }
+    35%, 80%{
+        opacity: 0;
+        filter: blur(100px);
+    }
+}
