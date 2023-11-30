@@ -1,9 +1,12 @@
 getButton.addEventListener("click", getUser); // id is getBtn
 let url = "https://randomuser.me/api"
+const loader = document.getElementById("loader");
 
 getUser(); // hoisting will ensure that functions are defined before this call
 
+
 function getUser() {
+    showLoader();
         // fetch returns a promise: pending until it resolves to a response object                    
     fetch(url)
         // now the promise is settled and we we have a response object
@@ -28,9 +31,24 @@ function decodeData(response) {     // take the response object as a parameter
 }
 
 function success(userData) {
+    hideLoader();
     // A template literal is of the form `three plus four is ${ 3 + 4 }`
-  apiData.innerHTML = `<img  class="user" src=${userData.results[0].picture.large} alt="rando user">
-    <h2 class="user">Meet ${userData.results[0].name.first} ${userData.results[0].name.last}</h2>`;
+  apiData.innerHTML = 
+    `<div class="flip-container">
+    <div class="flip-inner">
+        <div class="flip-front">
+            <img  class="user" src=${userData.results[0].picture.large} alt="rando user">
+            <h2 class="user">Meet ${userData.results[0].name.first}</h2>
+        </div>
+        <div class="flip-back">
+            <h2 class="back">Name: ${userData.results[0].name.first} ${userData.results[0].name.last}</h2>
+            <h2 class="back">Age: ${userData.results[0].dob.age}</h2>
+            <h2 class="back">City: ${userData.results[0].location.city}</h2> 
+        </div>
+    </div>
+    </div>
+
+    `;
 
   const apiFirst = userData.results[0].name.first;
   const apiLast = userData.results[0].name.last;
@@ -47,4 +65,12 @@ function fail(error) {
     apiData.innerHTML = "Something went wrong with parsing JSON."
     mdnCodes = "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
     apiData.innerHTML+= `<br>The problem: <a href=${mdnCodes}>${error} Error</a>`
+}
+
+function showLoader(){
+    loader.style.display = 'block';
+}
+
+function hideLoader(){
+    loader.style.display = 'none';
 }

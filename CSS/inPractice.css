@@ -1,9 +1,9 @@
-body{
+/* body{
     font-family: Arial, Helvetica, sans-serif;
     max-width: 800px;
     min-width: 280px;
     margin: auto;
-}
+} */
 #buttons {
     text-align: center;
 }
@@ -17,6 +17,57 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+.flip-container{
+    /* border: 15px solid dimgray; */
+    background-color: white;
+    border: 5px solid lightgray;
+    border-radius: 10%;
+    width: 200px;
+    height: 420px;
+    display: block;
+    margin:auto;
+    perspective: 1000px;
+}
+
+.flip-inner{
+    /* background-color: aliceblue; */
+    border: 5px solid lightgray;
+    border-radius: 20%;
+    border: 5px lightgray;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-container:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    border: 5px solid lightgray;
+    border-radius: 20%;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-front {
+    border: 5px lightgray;
+    color: black;
+}
+
+.flip-back {
+    border: 5px lightgray;
+    color: white;
+    transform: rotateY(180deg);
+} 
+
 
 img.user {
     border: 10px solid dimgray;
@@ -34,3 +85,39 @@ h2.user{
     margin: 5px;
 }
 
+h2.back{
+    color:dimgray;
+    text-align: left;
+    margin: 15px;
+}
+
+#loader{
+    border: 2px solid dimgray;
+    background-color:aliceblue;
+    padding: 2em;
+    margin: 20px auto;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    display: hidden;
+}
+
+.spinner {
+    display: flex;
+    flex-direction: column;
+    width: 64px;
+    height: 64px;
+    border: 8px solid;
+    border-color: #3d5af1 transparent #3d5af1 transparent;
+    border-radius: 50%;
+    animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
