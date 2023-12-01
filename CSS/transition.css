@@ -1,4 +1,50 @@
 
+
+.container {
+  position: relative;
+  /* top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  overflow: hidden;
+  height: 280px;
+  width: 300px;
+  margin-top: 20px;
+  margin: auto;
+  border-radius: 50%;
+  
+}
+
+
+.text {
+  font-size: 45px;
+}
+
+.dot {
+  position: relative; 
+  background-color: darkblue;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 20px; 
+  transition: all 0.75s cubic-bezier(.71, 0, .33, 1.56) 0ms;
+}
+
+.container:hover .dot {
+  transform: rotate(360deg);
+  border-radius: 0%;
+  background: gold;
+}
+
+
+
+
+
+
 .flip-container{
   display: flex;
   justify-content: center;
@@ -81,22 +127,28 @@ a.link1:hover::before {
 }
 
 .ball-container{
+  height: 600px;
+  width: 600px;
+  border: solid 5px black;
+}
+
+.ball-container-wrapper{
+  position:relative;
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 600px;
-  border: solid 5px black;
 }
 
 .ball{
   margin: 5px;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   position:relative;
   border-radius: 50%;
   text-align: center;
   vertical-align: middle;
-  line-height: 100px;
+  line-height: 80px;
   color: white;
 }
 
@@ -123,22 +175,31 @@ a.link1:hover::before {
   background-color: darkorange;
 }
 
+#ball6{
+  transition: all 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  background-color: cyan;
+}
+
 .ball-container:hover #ball1{
-  transform: translateX(700px);
+  transform: translateX(520px);
 }
 
 .ball-container:hover #ball2{
-  transform: translateX(700px);
+  transform: translateX(520px);
 }
 
 .ball-container:hover #ball3{
-  transform: translateX(700px);
+  transform: translateX(520px);
 }
 
 .ball-container:hover #ball4{
-  transform: translateX(700px);
+  transform: translateX(520px);
 }
 
 .ball-container:hover #ball5{
-  transform: translateX(700px);
+  transform: translateX(520px);
+}
+
+.ball-container:hover #ball6{
+  transform: translateX(520px)
 }

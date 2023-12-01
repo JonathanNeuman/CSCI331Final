@@ -41,9 +41,10 @@ function success(userData) {
             <h2 class="user">Meet ${userData.results[0].name.first}</h2>
         </div>
         <div class="flip-back">
-            <h2 class="back">Name: ${userData.results[0].name.first} ${userData.results[0].name.last}</h2>
-            <h2 class="back">Age: ${userData.results[0].dob.age}</h2>
-            <h2 class="back">City: ${userData.results[0].location.city}</h2> 
+            <h2 class="back">${userData.results[0].name.first} ${userData.results[0].name.last}</h2>
+            <p class="back">Age: ${userData.results[0].dob.age}</p>
+            <p class="back">Country: ${userData.results[0].location.country}</p>
+            <p class="back">City: ${userData.results[0].location.city}</p> 
         </div>
     </div>
     </div>
@@ -68,9 +69,13 @@ function fail(error) {
 }
 
 function showLoader(){
+    apiData.style.display = 'none';
+    setTimeout(300);
     loader.style.display = 'block';
 }
 
 function hideLoader(){
     loader.style.display = 'none';
+    setTimeout(300);
+    apiData.style.display = 'block';
 }

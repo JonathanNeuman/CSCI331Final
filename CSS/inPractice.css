@@ -1,30 +1,55 @@
-/* body{
+body{
     font-family: Arial, Helvetica, sans-serif;
-    max-width: 800px;
+    /* max-width: 800px;
     min-width: 280px;
-    margin: auto;
-} */
+    margin: auto; */
+}
+
 #buttons {
     text-align: center;
 }
 
-#apiData {
+#getButton{
+    width: 180px;
+	height: 60px;
+    background-image: linear-gradient(180deg, aliceblue, transparent);
+    border-radius: 20px;
+    transition: transform .4s ease .1s;
+    font-size: 20px;
+    font-weight: 500;
+    /* color:linear-gradient(180deg red gray); */
+}
+
+#getButton:hover{
+    transition: transform .2s;
+    transform: translateY(-10px);
+}
+
+.container{
     border: 2px solid dimgray;
     background-color:aliceblue;
     padding: 2em;
     margin: 20px auto;
     height: 190px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;   
+}
+#apiData {
+    /* border: 2px solid dimgray;
+    background-color:aliceblue;
+    padding: 2em;
+    margin: 20px auto;
+    height: 190px;
+    display: flex;
+    flex-direction: column; */
 }
 
 .flip-container{
-    /* border: 15px solid dimgray; */
-    background-color: white;
-    border: 5px solid lightgray;
+    background-color: transparent;
+    /* border: 5px solid lightgray; */
     border-radius: 10%;
     width: 200px;
-    height: 420px;
+    height: 200px;
     display: block;
     margin:auto;
     perspective: 1000px;
@@ -34,7 +59,7 @@
     /* background-color: aliceblue; */
     border: 5px solid lightgray;
     border-radius: 20%;
-    border: 5px lightgray;
+    border: solid 5px lightgray;
     position: relative;
     width: 100%;
     height: 100%;
@@ -91,15 +116,17 @@ h2.back{
     margin: 15px;
 }
 
+p.back{
+    color: dimgray;
+    text-align: left;
+    margin: 10px;
+}
+
 #loader{
-    border: 2px solid dimgray;
-    background-color:aliceblue;
-    padding: 2em;
-    margin: 20px auto;
-    height: 190px;
     display: flex;
     flex-direction: column;
-    display: hidden;
+    align-content: center;
+    margin: auto;
 }
 
 .spinner {
