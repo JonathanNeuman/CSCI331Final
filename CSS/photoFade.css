@@ -7,10 +7,10 @@
     align-items: center;
     justify-content: center;
     margin: 20px auto;
-    padding-top: 40px;
     object-fit: contain;
     box-sizing: border-box;
     border: 2px dashed orangered;
+    background-color: black;
     
 }
 
@@ -54,3 +54,17 @@
         background-image: url(../Images/trashcan.jpg);
     }
 }
+
+
+@keyframes animation-name {
+    /* Styles for each keyframe */
+    0% {
+      /* Styles at the start of the animation */
+    }
+    50% {
+      /* Styles at the midpoint of the animation */
+    }
+    100% {
+      /* Styles at the end of the animation */
+    }
+  }
