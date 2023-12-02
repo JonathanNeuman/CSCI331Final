@@ -1,58 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../CSS/nav.css" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/animation1.css">
+    <link href="../CSS/global.css" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/carAnimation.css">
     <link rel="stylesheet" href="../CSS/buttonStyle.css">
     <link rel="stylesheet" href="../CSS/percentLoader.css">
     <link rel="stylesheet" href="../CSS/photoFade.css">
     <link rel="stylesheet" href="../CSS/eyesFollow.css">
-    
+
     <title>Document</title>
 </head>
+
 <body>
     <nav>
-        <a class="nav" href = "index.html">Home</a>
+        <a class="nav" href="index.html">Home</a>
         <a class="nav" href="transitions.html">Transitions</a>
         <a class="nav" id="active" href="animations.html">Animations</a>
         <a class="nav" href="inPractice.html">In Practice</a>
     </nav>
 
     <h1>CSS Animations</h1>
-
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus cum a officia corporis ipsa earum, itaque enim dolore. Omnis vel exercitationem ut repellendus atque esse mollitia distinctio porro, aperiam consequatur?</p>
-
-    <div class="animation-container">
-        <div class="hero">
-            <div class="highway"></div>
-            <div class="city"></div>
-            <div class="car">
-                <img src="../carImages/car.png" alt="photo of car">
-            </div>
-            <div class="wheel">
-                <img class="back-wheel" src="../carImages/wheel.png" alt="photo of back wheel">
-                <img class="front-wheel" src="../carImages/wheel.png" alt="photo of front wheel">
-            </div>
-        </div>
-    </div>
-
-    <button>
-		<span>Submit</span>
-		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/></svg>
-	</button>
     
-    <div class="loader-holder">
-        <span class="loader"></span>
-    </div>
-
-    <div class="image-container">
-        <div class="photo-fade">
+    <div class="content">
+        <div class="container">
+            <div class="animation-container">
+                <div class="hero">
+                    <div class="highway"></div>
+                    <div class="city"></div>
+                    <div class="car">
+                        <img src="../carImages/car.png" alt="photo of car">
+                    </div>
+                    <div class="wheel">
+                        <img class="back-wheel" src="../carImages/wheel.png" alt="photo of back wheel">
+                        <img class="front-wheel" src="../carImages/wheel.png" alt="photo of front wheel">
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 
+        <div class="container">
+            <button>
+                <span>Submit</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="container">
+            <div class="loader-holder">
+                <span class="loader"></span>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="image-container">
+                <div class="photo-fade">
+                </div>
+            </div>
+        </div>
+
+        <!-- 
     <div class="face-container">
         <div class="face">
             <div class="eyes">
@@ -62,9 +75,12 @@
     
         </div>
     </div>
-    <script src="../JS/eyes.js" defer></script>
-    
+    <script src="../JS/eyes.js" defer></script> -->
 
-    
+    </div>
+
+
+
 </body>
+
 </html>
