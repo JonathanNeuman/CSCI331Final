@@ -37,7 +37,7 @@ function success(userData) {
     `<div class="flip-container">
     <div class="flip-inner">
         <div class="flip-front">
-            <img  class="user" src=${userData.results[0].picture.large} alt="rando user">
+            <img  class="user" src=${userData.results[0].picture.large}>
             <h2 class="user">Meet ${userData.results[0].name.first}</h2>
         </div>
         <div class="flip-back">
