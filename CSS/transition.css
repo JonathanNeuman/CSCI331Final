@@ -27,10 +27,6 @@
 } */
 
 
-.text {
-  font-size: 45px;
-}
-
 .dot {
   position: relative; 
   background-color: darkblue;
@@ -41,10 +37,19 @@
   transition: all 0.75s cubic-bezier(.71, 0, .33, 1.56) 0ms;
 }
 
-.container:hover .dot {
+.transition-spin-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+}
+
+.transition-spin-container:hover .dot{
   transform: rotate(360deg);
   border-radius: 0%;
   background: gold;
+
 }
 
 
@@ -94,6 +99,12 @@
   color: black;
 }
 
+.flip-box-front img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .flip-box-back {
   background-color: dodgerblue;
   color: white;
@@ -112,6 +123,7 @@ a.link1 {
   color: #18272F;
   position: relative;
   text-decoration: none;
+  font-size: 100px;
 }
 
 a.link1::before {
@@ -134,12 +146,14 @@ a.link1:hover::before {
 }
 
 .ball-container{
-  height: 600px;
-  width: 600px;
-  border: solid 5px black;
+  height: 90%;
+  width: 90%;
+  /* border: solid 5px black; */
 }
 
 .ball-container-wrapper{
+  width: 100%;
+  height: 100%;
   position:relative;
   display: flex;
   align-items: center;
@@ -149,14 +163,15 @@ a.link1:hover::before {
 
 .ball{
   margin: 5px;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 60px;
   position:relative;
   border-radius: 50%;
   text-align: center;
   vertical-align: middle;
-  line-height: 80px;
+  line-height: 60px;
   color: white;
+  font-size: 15px;
 }
 
 #ball1{
@@ -188,25 +203,25 @@ a.link1:hover::before {
 }
 
 .ball-container:hover #ball1{
-  transform: translateX(520px);
+  transform: translateX(650px);
 }
 
 .ball-container:hover #ball2{
-  transform: translateX(520px);
+  transform: translateX(650px);
 }
 
 .ball-container:hover #ball3{
-  transform: translateX(520px);
+  transform: translateX(650px);
 }
 
 .ball-container:hover #ball4{
-  transform: translateX(520px);
+  transform: translateX(650px);
 }
 
 .ball-container:hover #ball5{
-  transform: translateX(520px);
+  transform: translateX(650px);
 }
 
 .ball-container:hover #ball6{
-  transform: translateX(520px)
+  transform: translateX(650px)
 }
