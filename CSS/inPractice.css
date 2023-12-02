@@ -1,5 +1,9 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../Images/pexels-francesco-ungaro-998641.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     /* max-width: 800px;
     min-width: 280px;
     margin: auto; */
@@ -9,15 +13,16 @@ body{
     text-align: center;
 }
 
+
 #getButton{
+    
     width: 180px;
 	height: 60px;
-    background-image: linear-gradient(180deg, aliceblue, transparent);
     border-radius: 20px;
+    background-color: darkturquoise;
     transition: transform .4s ease .1s;
     font-size: 20px;
     font-weight: 500;
-    /* color:linear-gradient(180deg red gray); */
 }
 
 #getButton:hover{
@@ -25,14 +30,27 @@ body{
     transform: translateY(-10px);
 }
 
+.parent{
+    display: grid;
+}
+
+.container, .earth-container{
+    grid-area: 1/1;
+}
+
 .container{
-    border: 2px solid dimgray;
-    background-color:aliceblue;
+    /* position: absolute;
+    top: 200px; */
+    /* border: 2px solid dimgray;
+    background-color:aliceblue; */
+    display: grid;
     padding: 2em;
-    margin: 20px auto;
-    height: 190px;
-    display: flex;
-    flex-direction: column;   
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    /* display: flex;
+    flex-direction: column;  
+    z-index: 2;  */
 }
 #apiData {
     /* border: 2px solid dimgray;
@@ -48,9 +66,9 @@ body{
     background-color: transparent;
     /* border: 5px solid lightgray; */
     border-radius: 10%;
-    width: 200px;
-    height: 200px;
-    display: block;
+    width: 300px;
+    height: 300px;
+    /* display: block; */
     margin:auto;
     perspective: 1000px;
 }
@@ -98,8 +116,8 @@ img.user {
     border: 10px solid dimgray;
     background-color: dimgrey;
     border-radius: 40%;
-    width: 128px;
-    height: 128px;
+    width: 240px;
+    height: 240px;
     display: block;
     margin: auto;
 }
@@ -123,19 +141,24 @@ p.back{
 }
 
 #loader{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    margin: auto;
+    width: 100%;
+    height: 100%;
+    place-self: center;
+    display: grid;
+    place-items: center;
+    /* flex-direction: column;
+    align-content: center; */
+    /* margin: auto; */
 }
 
 .spinner {
-    display: flex;
-    flex-direction: column;
-    width: 64px;
-    height: 64px;
-    border: 8px solid;
-    border-color: #3d5af1 transparent #3d5af1 transparent;
+    /* display: flex;
+    flex-direction: column; */
+    /* place-self: center; */
+    width: 128px;
+    height: 128px;
+    border: 10px solid;
+    border-color: #0a9605 transparent #0a9605 transparent;
     border-radius: 50%;
     animation: spin-anim 1.2s linear infinite;
 }
@@ -148,3 +171,34 @@ p.back{
         transform: rotate(360deg);
     }
 }
+
+.earth-container{
+    /* position: absolute; */
+    top: 200px;
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: center; */
+    margin: auto;
+    /* z-index: 1; */
+
+}
+
+.earth {
+    --d:600px;
+    width: var(--d);
+    height:var(--d);
+    /* display:flex; */
+    margin: 5px;
+    border-radius: 50%;
+    box-shadow: -20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
+    background: 
+      url(https://i.stack.imgur.com/3SLqF.jpg)
+      0/auto 100%;
+    animation: spin 10s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      background-position:200% 0;
+    }
+  }

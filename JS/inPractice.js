@@ -70,12 +70,10 @@ function fail(error) {
 
 function showLoader(){
     apiData.style.display = 'none';
-    setTimeout(300);
-    loader.style.display = 'block';
+    loader.style.display = 'grid';
 }
 
 function hideLoader(){
     loader.style.display = 'none';
-    setTimeout(300);
     apiData.style.display = 'block';
 }
