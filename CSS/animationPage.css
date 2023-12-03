@@ -1,0 +1,14 @@
+body {
+    background: #FF0000;
+    animation: fadeBackground 15s infinite;
+}
+
+@keyframes fadeBackground {
+    0% { background-color: #FF0000; }
+    16.6% { background-color: #FF7F00; }
+    33.3% { background-color: #FFFF00; }
+    50% { background-color: #00FF00; }
+    66.6% { background-color: #0000FF; }
+    83.3% { background-color: #8B00FF; }
+    100% { background-color: #FF0000; }
+}

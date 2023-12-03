@@ -1,31 +1,42 @@
-body {
-    
-}
 
 .morph {
     margin: 90px;
+    /* positions element relative to its normal positon */
     position: relative;
     display: flex;
+    /* horizontally centers content */
     justify-content: center;
+    /* vertically centers  */
     align-items: center;
     font-size: 100px;
     color: darkgreen;
-    
+    /* sets height to 100% of its containing element */
     height: 100%;
     letter-spacing: 10px;
+    /* specifies a blur length to text 
+    and contrast value  */
     filter: blur(0.2px) contrast(30);
     padding-bottom: 60px;
 }
 
-
+/* targets child elements with the word class inside 
+elements with the class morph */
 .morph .word {
+    
     position: absolute;
-    padding: 0 50px;
+    /* 20px vertical padding 50px horizontal  */
+    padding: 20px 50px;
     background-color: rgba(255, 0, 0, 0.5); /* Red color with 50% opacity */
+    /* applies morph animation of 25 seconds
+    with linear timing, infinitely repeating */
     animation: morph 25s linear infinite;
+    /* 2 sec delay before animation starts */
     animation-delay: 2s;
     font-family: "Luckiest Guy", cursive;
 }
+
+/* these following lines set up specific delays for each word 
+and background colors based on their order within the parent element */
 
 .morph .word:nth-child(1){
     animation-delay: -16s;
@@ -47,11 +58,18 @@ body {
 }
 
 @keyframes morph{
+/* properties at the beginning 5% and end of animation */
     0%, 5%, 100%{
+    /* opacity set indicating full visibility  */
+    /* blur filter set to 0, meaning no blur */
         opacity: 1;
         filter: blur(0);
     }
+/* properties at the 35% and 80% of animation */
     35%, 80%{
+    /* opacity set indicating complete transparency
+    the text becomes fully transparent
+    text becomes very blurred with 100px length  */
         opacity: 0;
         filter: blur(100px);
     }

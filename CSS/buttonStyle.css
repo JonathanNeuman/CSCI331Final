@@ -10,46 +10,64 @@ button{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	/* sets the cursor to a pointer when hovering over the button */
 	cursor: pointer;
+	/* applies transition effect to all properties over duration of 500 ms */
 	transition: 500ms;
+	/* centers horizontally */
 	margin: 0 auto;
 }
 
 span, svg{
 	position: absolute;
 	color: black;
+	/* sets fill color of svg to transparent */
 	fill: transparent;
 	font-size: 20px;
 	letter-spacing: .2em;
 	font-weight: 400;
 }
+
+/* applies styles to button when it is in focus */
 button:focus{
+	/* removes default focus outline */
 	outline: none;
+	/* sets transparent border on the button */
 	border: 2px solid transparent;
+	/* adjusts width when in focus */
 	width: 60px;
+	/* sets border to left and bottom of button */
 	border-left: 2px solid black;
 	border-bottom: 2px solid black;
+	/* spin animation for 2 seconds with delay of 500ms playing forward */
 	animation: spin 2s 500ms forwards;
 }
+/* for the submit text, makes transparent when button is in focus */
 button:focus span{
 	color: transparent;
 }
+/* styles svg within the button when the button is in focus */
 button:focus svg{
+	/* applies check animation over 500ms with delay of 2300ms playing forward */
 	animation: check 500ms 2300ms forwards;
 }
 
-/* Let's Animate */
+
 
 @keyframes spin {
+	/* at 80% of animation, button has transparent border
+	except for left side, which has solid black */
 	80%{
 		border: 2px solid transparent;
 		border-left: 2px solid black;
 	}
+	/* at 100% the button is rotated by 1080 degrees and has solid black border */
 	100%{
 		transform: rotate(1080deg);
 		border: 2px solid black;
 	}
 }
+/* at end of animation the svg element changes to have black fill color */
 @keyframes check{
 	to{fill: black;}
 }

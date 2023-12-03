@@ -15,24 +15,33 @@
     width: 230px;
     background: #fff;
     border: 2px solid #fff;
+    /* sets text color to lime */
     color: lime;
+    /* hides content that overflows the loader */
     overflow: hidden;
     border: 2px solid black;
     border-radius: 30px;
 }
 
+/* styles pseudo-element before the content of the loader */
 .loader::before {
+  /* creates an empty content for the pseudo element */
     content: '';
     background: lime;
     position: absolute;
+    /* positions pseudo element at top left corner of the loader */
     left: 0;
     top: 0;
+    /* initially sets the width to 0 and height to 100% */
     width: 0;
     height: 100%;
+    /* applies loading animation over 10secs with linear timing infinitely */
     animation: loading 10s linear infinite;
 }
-
+ 
+/*styles a pseudo-element after the content of the loader  */
 .loader::after {
+  /* creates an empty content for the pseudo element */
     content: '';
     position: absolute;
     left: 0;
@@ -42,11 +51,15 @@
     text-align: center;
     font-size: 24px;
     line-height: 32px;
+    /* the blue color change when green loader passes the percentage */
     color: rgb(0,255,255);
+    /* blends the pseudo-element with the background using difference blend mode */
     mix-blend-mode: difference;
+    /* percentage animation for 10s linear timing infinitely */
     animation: percentage 10s linear infinite;
   }
   
+  /* creates the green loading effect  */
   @keyframes loading {
     0% { width: 0 }
     100% { width: 100% }

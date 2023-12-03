@@ -1,9 +1,12 @@
 body {
     background: #338a9c;
     animation: fadeBackground 8s;
+    /* do the animation forwards */
     animation-fill-mode: forwards;
 }
 
+/* at beginning of animation set background, 
+and end change to different color */
 @keyframes fadeBackground {
     from { background-color: #267888; }
     to { background-color: #a7dfeb;}

@@ -36,13 +36,20 @@
   background-color: darkblue;
   width: 100px;
   height: 100px;
+  /* makes a circle */
   border-radius: 50%;
   margin-top: 20px; 
+  /* specifies a transition effect for all properties 
+  for .75 seconds. The cubic-bezier function defines an easing curve for the transition */
   transition: all 0.75s cubic-bezier(.71, 0, .33, 1.56) 0ms;
 }
 
+/* selects dot class element that is child elemetn of container 
+when the container is in a hover state */
 .container:hover .dot {
+  /* rotates dot 360 degrees when it is hovered */
   transform: rotate(360deg);
+  /* changes dot to a square by removing radius */
   border-radius: 0%;
   background: gold;
 }
