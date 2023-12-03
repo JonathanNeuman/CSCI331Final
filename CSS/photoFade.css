@@ -10,8 +10,10 @@
     margin: 20px auto;
     object-fit: contain;
     box-sizing: border-box;
-    border: 2px dashed orangered;
+    border: 2px solid black;
     background-color: black;
+    border-radius: 10px;
+    
     
 }
 
@@ -39,10 +41,10 @@
 
 @keyframes animate {
     0% {
-        background-image: url(../Images/defranced.png);
+        background-image: url(../Images/cssImage.jpg);
     }
     20% {
-        background-image: url(../Images/smilingbucktooth.jpg);
+        background-image: url(../Images/trippy.jpg);
     }
     40% {
         background-image: url(../Images/computerPart.jpg);
