@@ -1,31 +1,3 @@
-/* .content{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-
-.container {
-  position: relative;
-  background-color: transparent;
-  /* top: 50%;
-  left: 50%; */
-  /* transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid black;
-  overflow: hidden;
-  height: 600px;
-  width: 800px;
-  margin-top: 20px;
-  margin: auto;
-  border-radius: 20px;
-} */
-
 
 .dot {
   position: relative; 
@@ -40,6 +12,8 @@
   transition: all 0.75s cubic-bezier(.71, 0, .33, 1.56) 0ms;
 }
 
+/* selects dot class element that is child elemetn of container 
+when the container is in a hover state */
 .transition-spin-container{
   display: flex;
   justify-content: center;
@@ -49,6 +23,7 @@
 }
 
 .transition-spin-container:hover .dot{
+  /* rotates dot 360 degrees when it is hovered */
   transform: rotate(360deg);
   /* changes dot to a square by removing radius */
   border-radius: 0%;
@@ -69,9 +44,6 @@
   background-color: transparent;
   width: 80%;
   height: 80%;
-  /* width: 300px;
-  height: 200px; */
-  /* border: 1px solid #f1f1f1; */
   perspective: 1000px;
 }
 
@@ -93,8 +65,6 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden;
-  /* Safari */
   backface-visibility: hidden;
 }
 
@@ -152,7 +122,6 @@ a.link1:hover::before {
 .ball-container{
   height: 90%;
   width: 90%;
-  /* border: solid 5px black; */
 }
 
 .ball-container-wrapper{
