@@ -5,9 +5,6 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    /* max-width: 800px;
-    min-width: 280px;
-    margin: auto; */
 }
 
 #buttons {
@@ -40,42 +37,26 @@ body{
 }
 
 .container{
-    /* position: absolute;
-    top: 200px; */
-    /* border: 2px solid dimgray;
-    background-color:aliceblue; */
     display: grid;
     padding: 2em;
     margin: auto;
     height: 300px;
     width: 300px;
-    /* display: flex;
-    flex-direction: column;  
-    z-index: 2;  */
 }
 #apiData {
-    /* border: 2px solid dimgray;
-    background-color:aliceblue;
-    padding: 2em;
-    margin: 20px auto;
-    height: 190px;
-    display: flex;
-    flex-direction: column; */
+    background-color: transparent;
 }
 
 .flip-container{
     background-color: transparent;
-    /* border: 5px solid lightgray; */
     border-radius: 10%;
     width: 310px;
     height: 310px;
-    /* display: block; */
     margin:auto;
     perspective: 1000px;
 }
 
 .flip-inner{
-    /* background-color: aliceblue; */
     border-radius: 20%;
     border: solid 5px lightgray;
     position: relative;
@@ -146,15 +127,9 @@ p.back{
     place-self: center;
     display: grid;
     place-items: center;
-    /* flex-direction: column;
-    align-content: center; */
-    /* margin: auto; */
 }
 
 .spinner {
-    /* display: flex;
-    flex-direction: column; */
-    /* place-self: center; */
     width: 128px;
     height: 128px;
     border: 10px solid;
@@ -173,21 +148,13 @@ p.back{
 }
 
 .earth-container{
-    /* position: absolute; */
-    top: 200px;
-    /* display: flex;
-    flex-direction: column; */
-    /* align-items: center; */
     margin: auto;
-    /* z-index: 1; */
 
 }
 
 .earth {
-    --d:600px;
-    width: var(--d);
-    height:var(--d);
-    /* display:flex; */
+    width: 600px;
+    height: 600px;
     margin: 5px;
     border-radius: 50%;
     box-shadow: -20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
@@ -202,5 +169,3 @@ p.back{
       background-position:200% 0;
     }
   }
-
-  
