@@ -33,6 +33,7 @@ body{
 }
 
 .container, .earth-container{
+    /*Allows for overlaying the random user info on top of the earth animation*/
     grid-area: 1/1;
 }
 
@@ -129,6 +130,7 @@ p.back{
     place-items: center;
 }
 
+/*Spinner is transparent circle with visible borders on two sides*/
 .spinner {
     width: 128px;
     height: 128px;
@@ -138,6 +140,7 @@ p.back{
     animation: spin-anim 1.2s linear infinite;
 }
 
+/*Animation rotates circle from 0 degrees to 360 degrees infinitely*/
 @keyframes spin-anim {
     0% {
         transform: rotate(0deg);
@@ -164,6 +167,7 @@ p.back{
     animation: spin 10s linear infinite;
   }
   
+  /*Animation moves earth image accross the div to simulate rotation*/
   @keyframes spin {
     to {
       background-position:200% 0;

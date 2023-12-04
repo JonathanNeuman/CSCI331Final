@@ -44,9 +44,11 @@ when the container is in a hover state */
   background-color: transparent;
   width: 80%;
   height: 80%;
+  /*perspective gives the element a 3D look when it is transformed*/
   perspective: 1000px;
 }
 
+/* inner container that flips when hovered*/
 .flip-box-inner {
   position: relative;
   width: 100%;
@@ -57,14 +59,17 @@ when the container is in a hover state */
 }
 
 .flip-box:hover .flip-box-inner {
+  /*when the flip-box div is hovered, rotates the flip-box-inner div by 180 deg*/
   transform: rotateY(180deg);
 }
 
 .flip-box-front,
 .flip-box-back {
+  /*Overlays the front and back div on top of each other*/
   position: absolute;
   width: 100%;
   height: 100%;
+  /*Hides the backs of both the front and back div so they don't show up during the flip*/
   backface-visibility: hidden;
 }
 
@@ -80,8 +85,9 @@ when the container is in a hover state */
 }
 
 .flip-box-back {
-  background-color: dodgerblue;
-  color: white;
+  background-color: aliceblue;
+  color: black;
+  /*flips the back 180 degrees when transformed*/
   transform: rotateY(180deg);
 }
 
@@ -94,27 +100,31 @@ when the container is in a hover state */
 }
 
 a.link1 {
-  color: #18272F;
+  color: black;
   position: relative;
+  /*removes the default text decoration that a link has*/
   text-decoration: none;
   font-size: 100px;
 }
 
 a.link1::before {
+  /*content is set to '' so that the content in the pseudo class is not hidden*/
   content: '';
   position: absolute;
   width: 100%;
   height: 4px;
   border-radius: 4px;
-  background-color: #18272F;
+  background-color: black;
   bottom: 0;
   left: 0;
+  /*When not hovered, the link underline is scaled to zero */
   transform-origin: right;
   transform: scaleX(0);
-  transition: transform .3s ease-in-out;
+  transition: transform .4s ease-in-out;
 }
 
 a.link1:hover::before {
+  /*On hover, scales the width of the link underline to the full width of the text*/
   transform-origin: left;
   transform: scaleX(1);
 }
