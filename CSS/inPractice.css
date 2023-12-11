@@ -28,6 +28,21 @@ body{
     transform: translateY(-10px);
 }
 
+#addButton{
+    width: 180px;
+	height: 60px;
+    border-radius: 20px;
+    background-color: darkturquoise;
+    transition: transform .4s ease .1s;
+    font-size: 20px;
+    font-weight: 500;  
+}
+
+#addButton:hover{
+    transition: transform .2s;
+    transform: translateY(-10px); 
+}
+
 .parent{
     display: grid;
 }

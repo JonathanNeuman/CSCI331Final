@@ -59,7 +59,7 @@ function success(userData) {
   apiform.innerHTML = `<input type="hidden" name="first" value="${apiFirst}"/><br>
   <input type="hidden" name="last" value="${apiLast}"/>
   <input type="hidden" name="age" value="${apiAge}"/>
-  <input type="submit" id="addBtn" class="btn" value="Add This One"></button>`
+  <button type="submit" id="addButton" class="btn" value="Add This One">Add This One</button>`
 }
 
 function fail(error) {
